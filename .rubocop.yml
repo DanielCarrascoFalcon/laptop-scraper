@@ -1,0 +1,17 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.7.4
+  TargetRailsVersion: 7.0
+  UseCache: true
+  Exclude:
+    - "vendor/bundle/**/*"
+    - "lib/templates/**/*"
+    - "node_modules/**/*"
+    - "bin/*"
+    - "tmp/**/*"
+    - "log/**/*"
+    - "coverage/**/*"
+    - "public/**/*"
