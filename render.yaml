@@ -1,0 +1,18 @@
+databases:
+  - name: laptop_scraper
+    databaseName: laptop_scraper
+    user: laptop_scraper
+
+services:
+  - type: web
+    name: laptop-scraper
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: laptop_scraper
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false

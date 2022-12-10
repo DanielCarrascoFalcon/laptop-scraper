@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: laptop_scraper_production
-  username: laptop_scraper
-  password: <%= ENV["LAPTOP_SCRAPER_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
