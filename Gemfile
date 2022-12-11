@@ -66,6 +66,8 @@ group :development, :test do
   gem 'erb_lint', '>= 0.0.32', require: false
   # Hace análisis estático de código
   gem 'brakeman', require: false
+  # Herramienta de testing
+  gem 'rspec-rails', '~> 6.0.0'
 end
 
 group :development do
