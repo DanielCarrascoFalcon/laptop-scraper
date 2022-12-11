@@ -66,6 +66,8 @@ group :development, :test do
   gem 'erb_lint', '>= 0.0.32', require: false
   # Hace análisis estático de código
   gem 'brakeman', require: false
+  # Herramienta de testing
+  gem 'rspec-rails', '~> 6.0.0'
 end
 
 group :development do
@@ -83,5 +85,10 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'simplecov', require: false
   gem 'webdrivers'
 end
+
+gem 'factory_bot_rails', '~> 6.2'
+
+gem "net-http", "~> 0.3.1"
